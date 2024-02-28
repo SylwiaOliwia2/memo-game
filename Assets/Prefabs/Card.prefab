@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isReversed: 0
   isMatched: 0
+  cardImage: 
 --- !u!1 &5764390699606603234
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
@@ -6,5 +7,6 @@ public class GameState : MonoBehaviour
     public int matched_cards = 0;
     public int reversed_cards = 0;
 
-    
+    public List<Clickable> reversed_not_matched_cards = new List<Clickable>();
+
 }
