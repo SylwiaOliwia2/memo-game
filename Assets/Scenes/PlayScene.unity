@@ -1186,6 +1186,10 @@ PrefabInstance:
       propertyPath: cardImage
       value: A
       objectReference: {fileID: 0}
+    - target: {fileID: 3553362063174152209, guid: 528e31674403a0159b2f4de4a36a338a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 51032718203196737, guid: 1e9fd95a6dd3ed191ad5a1ac6059c257, type: 3}
     - target: {fileID: 3715018979824651608, guid: 528e31674403a0159b2f4de4a36a338a, type: 3}
       propertyPath: m_Name
       value: Card 1a

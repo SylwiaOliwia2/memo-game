@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e9fd95a6dd3ed191ad5a1ac6059c257
+guid: c240b7550eb5ce9a0a6f94457e67888a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 51032718203196737
-    second: plaid-7223987_640_0
+      213: 5033733384163560134
+    second: Flower1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plaid-7223987_640_0
+      name: Flower1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 640
+        width: 324
+        height: 324
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1459c60acfd45b000800000000000000
-      internalID: 51032718203196737
+      spriteID: 6ca0811d7d96bd540800000000000000
+      internalID: 5033733384163560134
       vertices: []
       indices: 
       edges: []

@@ -154,7 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isReversed: 0
   isMatched: 0
-  cardImage: 
+  coverImage: {fileID: 51032718203196737, guid: 1e9fd95a6dd3ed191ad5a1ac6059c257, type: 3}
+  cardImage: {fileID: 0}
+  imageRenderer: {fileID: 3553362063174152209}
 --- !u!1 &5764390699606603234
 GameObject:
   m_ObjectHideFlags: 0
