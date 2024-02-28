@@ -26,7 +26,6 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        
         if (!isReversed)
         {
             if (Managers.GameState.reversed_not_matched_cards.Count <2)
@@ -55,7 +54,6 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
 
     public void reverseCard(){
         this.isReversed = !this.isReversed;
-        // TODO: update card image 
         Managers.GameState.reversed_cards += 1;
         Managers.GameState.reversed_not_matched_cards.Add(this);
         imageRenderer.sprite = cardImage;
@@ -76,11 +74,9 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
         Managers.GameState.reversed_not_matched_cards.Clear();
         Managers.GameState.reversed_cards -= 2;
         card_reveresed_1.isReversed = false;
-        // TODO: update card image 
         card_reveresed_2.isReversed = false;
         card_reveresed_1.imageRenderer.sprite = card_reveresed_1.coverImage;
         card_reveresed_2.imageRenderer.sprite = card_reveresed_2.coverImage;
-        // TODO: update card image 
         Debug.Log("Managers state for reversed cards:" + Managers.GameState.reversed_cards);
         Debug.Log("Managers state for reversed cards:" + Managers.GameState.matched_cards);
     }
