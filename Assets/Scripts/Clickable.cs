@@ -45,6 +45,7 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
                     DOTween.Sequence().AppendInterval(2.5f).OnComplete(
                         ()=>{
                             revertCardsToPreviousState(card_reveresed_1, card_reveresed_2);
+                            // coś tu się psuje.
                         }
                     );
                 }
@@ -58,7 +59,7 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
         Managers.GameState.reversed_not_matched_cards.Add(this);
         imageRenderer.sprite = cardImage;
         Debug.Log(this.name + " reversed: " + this.isReversed);
-        Debug.Log("Managers state for reversed cards:" + Managers.GameState.reversed_cards);
+        Debug.Log("Managers state for reverseCard(revresed):" + Managers.GameState.reversed_cards);
     }
 
     public void markPairAsMatched(Clickable card_reveresed_1, Clickable card_reveresed_2){
@@ -66,8 +67,8 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
         card_reveresed_2.isMatched = true;
         Managers.GameState.matched_cards += 2;
         Managers.GameState.reversed_not_matched_cards.Clear();
-        Debug.Log("Managers state for reversed cards:" + Managers.GameState.reversed_cards);
-        Debug.Log("Managers state for reversed cards:" + Managers.GameState.matched_cards);
+        Debug.Log("Managers state markPairAsMatched (matched):" + Managers.GameState.reversed_cards);
+        Debug.Log("Managers state markPairAsMatched (revresed):" + Managers.GameState.matched_cards);
     }
 
     public void revertCardsToPreviousState(Clickable card_reveresed_1, Clickable card_reveresed_2) {
@@ -77,7 +78,7 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
         card_reveresed_2.isReversed = false;
         card_reveresed_1.imageRenderer.sprite = card_reveresed_1.coverImage;
         card_reveresed_2.imageRenderer.sprite = card_reveresed_2.coverImage;
-        Debug.Log("Managers state for reversed cards:" + Managers.GameState.reversed_cards);
-        Debug.Log("Managers state for reversed cards:" + Managers.GameState.matched_cards);
+        Debug.Log("Managers state revertCardsToPreviousState (revresed):" + Managers.GameState.reversed_cards);
+        Debug.Log("Managers state revertCardsToPreviousState (matched):" + Managers.GameState.matched_cards);
     }
 }

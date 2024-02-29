@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 687f6032bb54f5f55aa5ff64c8a14db1
+guid: ff9fbf1ec88f92a2490d6b3601e09391
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4965292787093714233
-    second: daisy-5383056_1920_0
+      213: -3157977386310054202
+    second: background_meadow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: daisy-5383056_1920_0
+      name: background_meadow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1280
+        width: 2688
+        height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 935b78c8b7348e440800000000000000
-      internalID: 4965292787093714233
+      spriteID: 6cec5408c4c9c24d0800000000000000
+      internalID: -3157977386310054202
       vertices: []
       indices: 
       edges: []

@@ -15,7 +15,6 @@ public class CardGenerator : MonoBehaviour
     
     void Awake()
     {
-        // list(range(5))
         foreach (Sprite img in imageSet) 
         {
             Clickable p1 = Instantiate(myPrefab, transform);
