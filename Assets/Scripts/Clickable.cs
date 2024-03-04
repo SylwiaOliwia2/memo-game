@@ -43,7 +43,6 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
                         DOTween.Sequence().AppendInterval(2.5f).OnComplete(
                             ()=>{
                                 revertCardsToPreviousState(card_reveresed_1, card_reveresed_2);
-                                // coś tu się psuje.
                             }
                         );
                     }

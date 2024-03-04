@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isReversed: 0
   isMatched: 0
-  coverImage: {fileID: 5902131333305073818, guid: 6e422703421fdaf848425e8847b442b1, type: 3}
+  coverImage: {fileID: -1589914923298429795, guid: fc382b9916d33976d8547d56c635f816, type: 3}
   cardImage: {fileID: 0}
   imageRenderer: {fileID: 3553362063174152209}
 --- !u!1 &7250151405812489597
