@@ -31,25 +31,26 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
             if (Managers.GameState.reversed_not_matched_cards.Count <2)
             {
                 reverseCard();
+                if (Managers.GameState.reversed_not_matched_cards.Count == 2)
+                {
+                    Clickable card_reveresed_1 = Managers.GameState.reversed_not_matched_cards[0];
+                    Clickable card_reveresed_2 = Managers.GameState.reversed_not_matched_cards[1];
+                    if (card_reveresed_1.cardImage == card_reveresed_2.cardImage)
+                    {
+                        markPairAsMatched(card_reveresed_1, card_reveresed_2);
+                    }
+                    else {
+                        DOTween.Sequence().AppendInterval(2.5f).OnComplete(
+                            ()=>{
+                                revertCardsToPreviousState(card_reveresed_1, card_reveresed_2);
+                                // coś tu się psuje.
+                            }
+                        );
+                    }
+                }
             }
 
-            if (Managers.GameState.reversed_not_matched_cards.Count == 2)
-            {
-                Clickable card_reveresed_1 = Managers.GameState.reversed_not_matched_cards[0];
-                Clickable card_reveresed_2 = Managers.GameState.reversed_not_matched_cards[1];
-                if (card_reveresed_1.cardImage == card_reveresed_2.cardImage)
-                {
-                    markPairAsMatched(card_reveresed_1, card_reveresed_2);
-                }
-                else {
-                    DOTween.Sequence().AppendInterval(2.5f).OnComplete(
-                        ()=>{
-                            revertCardsToPreviousState(card_reveresed_1, card_reveresed_2);
-                            // coś tu się psuje.
-                        }
-                    );
-                }
-            }
+
         }
     }
 
@@ -72,12 +73,12 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
     }
 
     public void revertCardsToPreviousState(Clickable card_reveresed_1, Clickable card_reveresed_2) {
-        Managers.GameState.reversed_not_matched_cards.Clear();
-        Managers.GameState.reversed_cards -= 2;
-        card_reveresed_1.isReversed = false;
-        card_reveresed_2.isReversed = false;
         card_reveresed_1.imageRenderer.sprite = card_reveresed_1.coverImage;
         card_reveresed_2.imageRenderer.sprite = card_reveresed_2.coverImage;
+        card_reveresed_1.isReversed = false;
+        card_reveresed_2.isReversed = false;
+        Managers.GameState.reversed_not_matched_cards.Clear();
+        Managers.GameState.reversed_cards -= 2;
         Debug.Log("Managers state revertCardsToPreviousState (revresed):" + Managers.GameState.reversed_cards);
         Debug.Log("Managers state revertCardsToPreviousState (matched):" + Managers.GameState.matched_cards);
     }
