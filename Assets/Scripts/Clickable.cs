@@ -14,6 +14,9 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
     public bool isReversed = false;
     public bool isMatched = false;
 
+    [SerializeField] protected float timeToReverse = 2.5f;
+
+
     [SerializeField] protected Sprite coverImage;
 
     public Sprite cardImage;
@@ -40,7 +43,7 @@ public class Clickable : MonoBehaviour, IPointerClickHandler
                         markPairAsMatched(card_reveresed_1, card_reveresed_2);
                     }
                     else {
-                        DOTween.Sequence().AppendInterval(2.5f).OnComplete(
+                        DOTween.Sequence().AppendInterval(timeToReverse).OnComplete(
                             ()=>{
                                 revertCardsToPreviousState(card_reveresed_1, card_reveresed_2);
                             }
